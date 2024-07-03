@@ -6,7 +6,8 @@
 }
 
 :root {
-    --primary-color: rgb(0, 0, 245);
+    --primary-color: rgb(77, 20, 210);
+    --background-color: #fbf8f3;;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
 header {
     padding: 50px 100px;
     height: 600px;
-    background-color: #fbf8f3;
+    background-color: var(--background-color);
 }
 
 nav {
@@ -30,14 +31,27 @@ nav ul li {
     margin-right: 10px;
     cursor: pointer;
 }
-
-.btn-pry {
-    background-color: var(--primary-color);
-    color: white;
+.btn{
     padding: 10px;
     border-radius: 5px;
     transition: all .5s;
     border: none;
+    font-weight: 700;
+}
+.btn-border{
+    border: 1px solid rgba(0, 0, 0, .2);
+    margin: 10px auto;
+    display: block;
+    width: 100%;
+    padding: 15px 0px;
+}
+.btn-pry {
+    background-color: var(--primary-color);
+    color: white;
+}
+.btn-sec{
+    color: var(--primary-color);
+    background-color: white;
 }
 
 .btn-pry:hover {
@@ -150,7 +164,7 @@ section h4 {
     color: rgba(0, 0, 0, .6);
 }
 .section2{
-    height: 500px;
+    height: 420px;
 }
 .sectionImg {
     display: flex;
@@ -165,14 +179,16 @@ section h4 {
 .sectionImg_right {
     position: relative;
     flex-basis: 50%;
-    width: 50%;
     height: 100%;
 }
 
 .sectionImg_left {
-    width: 50%;
     flex-basis: 50%;
-    padding: 10px;
+    padding-left: 30px;
+}
+.sectionImg_left p{
+    margin-bottom: 10px;
+   
 }
 
 .sectionImg_right img {
@@ -183,7 +199,55 @@ section h4 {
     width: 90%;
     height: 80%;
 }
-
+.testimonials{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.testi_col{
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.t_header{
+    display: flex;
+    margin-bottom: 10px;
+}
+.t_header ul{
+    margin-left: 10px;
+    
+}
+.t_header ul li{
+    list-style-type: none;
+    
+}
+.t_header ul li:nth-child(1){
+    color: var(--primary-color);
+    font-weight: 700;
+    
+}
+.footer_cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer{
+    padding: 50px 100px;
+    background-color: var(--background-color);
+    font-size: 13px;
+}
+footer table{
+    flex-basis: 60%;
+}
+table th{
+    text-align: left;
+}
+footer .col_1{
+    flex-basis: 35%;
+}
 @media (max-width: 768px) {
     header {
         padding: 25px 50px;
